@@ -1,6 +1,6 @@
 # Sonido estéreo y ficheros WAVE
 
-## Nom i cognoms
+## Eduard Peñas Balart 
 
 ## El formato WAVE
 
