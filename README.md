@@ -216,11 +216,11 @@ def estereo2mono(ficEste, ficMono, canal=2):
 ````
 ##### Pruebas de `estereo2mono()`
 
-![Señal semisuma](img/semisuma)
-![Señal semidiferencia](img/semidiferencia)
-![Señal canal izquierdo](img/canal_izquierdo)
-![Señal canal derecho](img/canal_derecho)
-![Señal estereo original](img/wav_komm)
+![Señal semisuma](img/semisuma.png)
+![Señal semidiferencia](img/semidiferencia.png)
+![Señal canal izquierdo](img/canal_izquierdo.png)
+![Señal canal derecho](img/canal_derecho.png)
+![Señal estereo original](img/wav_komm.png)
 
 ##### Código de `mono2estereo()`
 ##### Pruebas de `mono2estereo()`
