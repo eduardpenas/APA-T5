@@ -336,7 +336,10 @@ def decEstereo(ficCod, ficEste):
         f_out.write(datos_estereo)
 ```
 ##### Pruebas de `decEstereo()`
-
+````python
+decEstereo('codificado.wav', 'recuperado.wav')
+````
+![Detalles audio](img/recuperacion.png)
 #### Subida del resultado al repositorio GitHub y *pull-request*
 
 La entrega se formalizará mediante *pull request* al repositorio de la tarea.
