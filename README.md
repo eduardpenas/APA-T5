@@ -271,6 +271,10 @@ def mono2stereo(ficIzq, ficDer, ficEste):
 
 ```
 ##### Pruebas de `mono2estereo()`
+```python
+mono2stereo('canal_izquierdo.wav', 'canal_derecho.wav', 'reconstruido.wav')
+```
+![Señal reconstruido](img/reconstruido.png)
 
 ##### Código de `codEstereo()`
 ```python
