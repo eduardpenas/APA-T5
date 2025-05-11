@@ -216,6 +216,19 @@ def estereo2mono(ficEste, ficMono, canal=2):
 ````
 ##### Pruebas de `estereo2mono()`
 
+```python
+# Canal izquierdo
+estereo2mono('wav_komm.wav', 'canal_izquierdo.wav', canal=0)
+
+# Canal derecho
+estereo2mono('wav_komm.wav', 'canal_derecho.wav', canal=1)
+
+# Semisuma (por defecto)
+estereo2mono('wav_komm.wav', 'semisuma.wav')
+
+# Semidiferencia
+estereo2mono('wav_komm.wav', 'semidiferencia.wav', canal=3)
+```
 ![Señal semisuma](img/semisuma.png)
 ![Señal semidiferencia](img/semidiferencia.png)
 ![Señal canal izquierdo](img/canal_izquierdo.png)
