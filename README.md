@@ -189,12 +189,16 @@ para que se realice el realce sintáctico en Python del mismo (no vale insertar 
 pantalla, debe hacerse en formato *markdown*).
 
 ##### Código de `estereo2mono()`
+##### Pruebas de `estereo2mono()`
 
 ##### Código de `mono2estereo()`
+##### Pruebas de `mono2estereo()`
 
 ##### Código de `codEstereo()`
+##### Pruebas de `codEstereo()`
 
 ##### Código de `decEstereo()`
+##### Pruebas de `decEstereo()`
 
 #### Subida del resultado al repositorio GitHub y *pull-request*
 
