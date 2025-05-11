@@ -189,7 +189,38 @@ para que se realice el realce sintáctico en Python del mismo (no vale insertar 
 pantalla, debe hacerse en formato *markdown*).
 
 ##### Código de `estereo2mono()`
+```python
+
+def estereo2mono(ficEste, ficMono, canal=2):
+    """
+    Convierte un archivo estéreo WAVE de 16 bits a mono según el canal indicado.
+
+    Parametros:
+    ficEste -- ruta del archivo de entrada estéreo
+    ficMono -- ruta del archivo de salida mono
+    canal -- modo de conversión (0: izquierdo, 1: derecho, 2: semisuma, 3: semidiferencia)
+    """
+    with open(ficEste, 'rb') as f_in:
+        cab = leer_cabecera_wave(f_in)
+        if cab['num_channels'] != 2:
+            raise ValueError('El archivo no es estéreo')
+        datos = f_in.read(cab['data_size'])
+
+    tam = cab['bits_per_sample'] // 8
+    muestras = [datos[i:i+2*tam] for i in range(0, len(datos), 2*tam)]
+    datos_mono = b''.join([procesar_muestra(m, tam, canal) for m in muestras])
+
+    with open(ficMono, 'wb') as f_out:
+        escribir_cabecera_wave(f_out, 1, cab['sample_rate'], cab['bits_per_sample'], len(datos_mono))
+        f_out.write(datos_mono)
+````
 ##### Pruebas de `estereo2mono()`
+
+![Señal semisuma](img/semisuma)
+![Señal semidiferencia](img/semidiferencia)
+![Señal canal izquierdo](img/canal_izquierdo)
+![Señal canal derecho](img/canal_derecho)
+![Señal estereo original](img/wav_komm)
 
 ##### Código de `mono2estereo()`
 ##### Pruebas de `mono2estereo()`
