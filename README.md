@@ -302,7 +302,10 @@ def codEstereo(ficEste, ficCod):
         f_out.write(datos_cod)
 ```
 ##### Pruebas de `codEstereo()`
-
+```pyhton
+codEstereo('wav_komm.wav', 'codificado.wav')
+```
+![Detalles audio](img/pruebacod.png)
 ##### Código de `decEstereo()`
 ```python
 def decEstereo(ficCod, ficEste):
